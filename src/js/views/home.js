@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
+import { BsTrash3 } from 'react-icons/bs';
+import { BsPencil } from 'react-icons/bs';
 
 
 export const Home = () => {
@@ -50,11 +52,11 @@ export const Home = () => {
 					</div>
 					<div className="card-footer bg-transparent d-flex justify-content-between">
 						<button onClick={() => deletContact(contact)} className="btn btn-danger">
-						<i className="fa fa-trash"></i>
+							<BsTrash3/>
 						</button>
 						<Link to={`/formEdit/${contact.id}`}>
 							<button className="btn btn-warning">
-							<i class="fa-solid fa-pen-nib"></i>
+								<BsPencil/>
 							</button>
 						</Link>
 					</div>

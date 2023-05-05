@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AiOutlineCheck } from 'react-icons/ai';
 
 
 export const Form = () => {
@@ -73,7 +74,7 @@ export const Form = () => {
                 </div>
                 <div className="col-12">
                     <button onClick={postContacts} className="btn btn-primary btn-success float-end">
-                        <i class="fa-solid fa-check"></i>
+                        <AiOutlineCheck/>
                     </button>
                 </div>
             </form>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { AiOutlineCheck } from 'react-icons/ai';
 
 export const FormEdit = () => {
     const [full_name, setFull_name] = useState("")
@@ -90,7 +91,7 @@ export const FormEdit = () => {
                 </div>
                 <div>
                     <button onClick={editContact} type="submit" className="btn btn-primary btn-success float-end">
-                        Edit
+                        <AiOutlineCheck/>
                     </button>
                 </div>
             </form>
