@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import { AiOutlineCheck } from 'react-icons/ai';
 
 export const FormEdit = () => {
@@ -8,6 +8,8 @@ export const FormEdit = () => {
     const [address, setAddress] = useState("")
     const [phone, setPhone] = useState("")
     const { id } = useParams()
+    const navigate = useNavigate();
+
     console.log(id)
     useEffect(() => {
         getContact();
@@ -26,7 +28,9 @@ export const FormEdit = () => {
         setPhone(data.phone)
     };
 
-    const editContact = async () => {
+    const editContact = async (e) => {
+        e.preventDefault()
+
         let requestOptions = {
             method: "PUT",
             headers: {
@@ -44,6 +48,7 @@ export const FormEdit = () => {
         const response = await fetch(`https://assets.breatheco.de/apis/fake/contact/${id}`, requestOptions);
         const data = await response.json();
         console.log(data)
+        navigate("/")
     };
 
     return (
