@@ -85,7 +85,17 @@ Metodo PUT
                 Ej:  `https://assets.breatheco.de/apis/fake/contact/${id}`
             6. En el cuerpo de tu peticion igualas las variables del frontend y del backend 
             7. Arrojas el resultado a la consola
-            
+
+INFO SOBRE NAVIGATE 
+
+import { useNavigate } from "react-router-dom";
+
+dentro del componente y despues del fetch:
+const navigate = useNavigate();
+
+hay que declararlo en la funcion
+navigate("/") 
+        dentro de las comillas va la ruta para redirigir el usuario
 
 
 
